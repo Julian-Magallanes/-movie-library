@@ -33,10 +33,13 @@ function cardGenerator(movie) {
     cardContainer.appendChild(cardDiv)
 }
 
-function movieMap(){
-    for(const movie of tempData){
-        cardGenerator(movie)
-    }
-}
 
-movieMap()
+$.get(`https://students-api.2.us-1.fl0.io/movies`,(DataMovies, status) =>{
+    if (status==="success"){
+        for(const movie of DataMovies){
+            cardGenerator(movie)
+        }
+    } else {
+        alert("Error")
+    }
+})
