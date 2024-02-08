@@ -4,42 +4,27 @@ const cardContainer = document.getElementById("card_Container")
 function cardGenerator(movie) {
     const cardDiv = document.createElement('div')
     cardDiv.classList.add('card')
-
-    const imgElement = document.createElement('img')
-    imgElement.src = movie.poster
-    imgElement.alt = movie.title
-
-    const titleElement = document.createElement('a')
-    titleElement.innerText = movie.title
-    titleElement.href = "../"
-
-    const yearElement = document.createElement('h6')
-    yearElement.innerText = `Año: ${movie.year}`
-
-    const directorElement = document.createElement('h6')
-    directorElement.innerText = `Director: ${movie.director}`
-
-    const durationElement = document.createElement('h6')
-    durationElement.innerText = `Duracion: ${movie.duration}`
-
-    const genreElement = document.createElement('h6')
-    const genres = movie.genre.join(" - ")
-    genreElement.innerText = `Generos: ${genres}`
-
-    const rateElement = document.createElement('h6')
-    rateElement.innerText = `Puntuacion: ${movie.rate}`
-
-    cardDiv.append (imgElement, titleElement, yearElement, directorElement,durationElement, genreElement,rateElement)
+// optimizando codigo con innerHtml para evitar crear tantos elementos y apendear tanto
+    cardDiv.innerHTML = `
+    <img src = "${movie.poster} alt="${movie.title}"/>
+    <a href ="../">${movie.title}</a>
+    <div class="card_list">
+        <h6>Año: ${movie.year}</h6>
+        <h6>Director: ${movie.director}</h6>
+        <h6>Duracion: ${movie.duration}</h6>
+        <h6>Generos: ${movie.genre.join(" - ")}</h6>
+        <p>${movie.rate}</p>
+    </div>
+    `
     cardContainer.appendChild(cardDiv)
 }
 
 
 $.get(`https://students-api.2.us-1.fl0.io/movies`,(DataMovies, status) =>{
     if (status==="success"){
-        for(const movie of DataMovies){
-            cardGenerator(movie)
+        DataMovies.map(movie =>cardGenerator(movie))
         }
-    } else {
+     else {
         alert("Error")
     }
 })

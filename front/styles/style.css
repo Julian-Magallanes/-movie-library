@@ -1,6 +1,9 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+a{
+    text-decoration: none;
+}
 .navBar{
     height: 60px;
     background-color: #060D17;
@@ -63,26 +66,15 @@
     border: none;
     margin:  0 20px 0 20px ;
 }
-.navBar_menuList {
-    display: flex;
-    flex-direction: row;
-    color: #fff;
-    font-size: 20px;
+.menuList{
+    background-color: #060D17;
 }
-.navBar_menuList li{
-    display: flex;
-    background-color: #1C252F;
-    border-radius: 8px;
-    height: 40px;
-    width: 220px;
-    margin: 0px 20px 0px 20px;
-    justify-content: center;
-    align-items: center;
-
+.btn{
+    border: none
+;
 }
 .navBar_menu img{
     height: 28px;
-    display: none;
     align-items: center
 
 }
@@ -152,18 +144,16 @@ font-size: 40px;
     color: #fff;
 }
 
-.filter_ContainerDropdown {
-    color: #fff;
+.menuListFilter{
+    background-color: #1C252F;
     display: flex;
     flex-direction: row;
     align-items: center;
+    align-content: center;
 }
-.filter_ContainerDropdown p{
-    font-family: 40px;
-}
-.filter_ContainerDropdown img{
-    height: 18px;
-    margin: 6px;
+.menuListFilter p{
+    margin: 0 ;
+
 }
 #card_Container{
     background-color: #060D17;
@@ -177,26 +167,60 @@ font-size: 40px;
 .card{
     background-color: #1C252F;
     margin: 20px 40px 20px 40px;
-    width: 290px;
+    width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
     text-align: center;
+    transition: 0.5s;
 }
+.card:hover{
+    scale: 1.1;
+    opacity: 80%;
 
+}
 .card img {
-    height: 430px;
+    height: 500px;
     border-radius: 10px 10px 0px 0px;
 }
+
 .card a {
     height: 70px;
     font-size: 22px;
     color: #fff;
     width: 90%;
     text-align: center;
+    text-decoration: none;
+}
+.card p{
+    font-size: 22px;
+    color: #1C252F;
+    background: #FFF;
+    border-radius: 50%;
+    padding: 8px;
+    margin-top: 20px;
 }
 .card h6{
+    font-size: 18px;
+    color: #fff;
+    margin: 4px 0 4px 0;
+
+}
+.card_list{
+    opacity: 0;
     font-size: 16px;
     color: #fff;
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+    padding: 20px;
+
+}
+.card_list:hover{
+    opacity: 1;
+    background-color: #1C252F;
 }
