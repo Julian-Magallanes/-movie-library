@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
@@ -27,18 +31,71 @@
             <button>Iniciar Sesion</button>
           </div>
           <div class="navBar_menu">
-            <img src="../images/🦆 icon _menu_.png" alt="iconMenu">
-            <ul class="navBar_menuList">
-              <li><a href="../pages/sobre-mi-proyecto.html">Sobre mi proyecto</a></li>
-              <li><a href="../pages/historia-del-cine.html">Historia del cine</a></li>
-              <li><a href="../pages/webs-recomendadas.html">Webs recomendadas</a></li>
+            <button class="btn btn-dark menuList" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../images/🦆 icon _menu_.png" alt="iconMenu">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a href="../index.html" class="dropdown-item fs-5">Home</a></li>
+              <li><a href="../pages/sobre-mi-proyecto.html" class="dropdown-item fs-5">Sobre mi proyecto</a></li>
+              <li><a href="../pages/historia-del-cine.html" class="dropdown-item fs-5">Historia del cine</a></li>
+              <li><a href="../pages/webs-recomendadas.html" class="dropdown-item fs-5">Webs recomendadas</a></li>
+              <li><a href="../pages/contactanos.html" class="dropdown-item fs-5">Contactanos</a></li>            
             </ul>
           </div>
       </div>
       </nav>
     </header>
     <main>
-
+      <div class="container_pages2" > 
+        <a href="http://www.cine.ar/" target="_blank">
+          <div class="card">
+            <img src="../images/cine_ar.jpg" class="card-img-top" alt="logo-sin-bajada">
+            <div class="card-body">
+              <p class="card-text">Visita esta pagina donde podras ver contenidos del cine argentino.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.oscars.org/" target="_blank">
+          <div class="card" >
+            <img src="../images/oscars.jpg" class="card-img-top" alt="logo-oscar">
+            <div class="card-body">
+              <p class="card-text">Visita esta pagina donde podras ver contenidos de la mas grande premiación de cine.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.espinof.com/" target="_blank">
+          <div class="card" >
+            <img src="../images/espinof.jpg" class="card-img-top" alt="logo-espinof">
+            <div class="card-body">
+              <p class="card-text">Visita esta pagina donde podras ver las ultimas noticias del cine.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.fotogramas.es/" target="_blank">
+          <div class="card" >
+            <img src="../images/Fotogramas.webp" class="card-img-top" alt="logo-fotogramas">
+            <div class="card-body">
+              <p class="card-text">Visita esta pagina donde podras ver las ultimas noticias del cine.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.sensacine.com/" target="_blank">
+          <div class="card" >
+            <img src="../images/sensacine.jpg" class="card-img-top" alt="logo-sensasine">
+            <div class="card-body">
+              <p class="card-text">Visita esta pagina donde podras ver las ultimas noticias del cine.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.tomatazos.com/" target="_blank">
+          <div class="card" >
+            <img src="../images/tomatazos.png" class="card-img-top" alt="logo-tomatazos">
+            <div class="card-body">
+              <p class="card-text">Visita esta pagina donde podras calificar las peliculas que te gustan.</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </main>
     <script src="../scripts/tempData.js"></script>
     <script src="../scripts/index.js"></script>

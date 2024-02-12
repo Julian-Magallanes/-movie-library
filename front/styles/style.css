@@ -164,7 +164,7 @@ font-size: 40px;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.card{
+.card_movies{
     background-color: #1C252F;
     margin: 20px 40px 20px 40px;
     width: 320px;
@@ -175,17 +175,17 @@ font-size: 40px;
     text-align: center;
     transition: 0.5s;
 }
-.card:hover{
+.card_movies:hover{
     scale: 1.1;
     opacity: 80%;
 
 }
-.card img {
+.card_movies img {
     height: 500px;
     border-radius: 10px 10px 0px 0px;
 }
 
-.card a {
+.card_movies a {
     height: 70px;
     font-size: 22px;
     color: #fff;
@@ -193,7 +193,7 @@ font-size: 40px;
     text-align: center;
     text-decoration: none;
 }
-.card p{
+.card_movies p{
     font-size: 22px;
     color: #1C252F;
     background: #FFF;
@@ -201,7 +201,7 @@ font-size: 40px;
     padding: 8px;
     margin-top: 20px;
 }
-.card h6{
+.card_movies h6{
     font-size: 18px;
     color: #fff;
     margin: 4px 0 4px 0;
@@ -223,4 +223,75 @@ font-size: 40px;
 .card_list:hover{
     opacity: 1;
     background-color: #1C252F;
+}
+.container_pages{
+    background-color: #060D17;
+    color: #fff;
+    padding: 80px;
+}
+.container_pages2{
+    background-color: #060D17;
+    color: #fff;
+    padding: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container_pages h4{
+    font-size: 40px;
+}
+.container_pages img{
+    width: 1200px;
+    border-radius: 10px;
+}
+.container_pages p{
+    font-size: 24px;
+}
+.container_pagesSections h6{
+    font-size: 18px;
+    margin: 6px;
+}
+.container_pagesSections h5{
+    font-size: 32px;
+    margin: 6px;
+}
+.container_pagesSections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card{
+    margin: 40px;
+    width: 50rem;
+    height: 55rem;
+}
+.card-img-top{
+    height: 50rem;
+}
+.card-text{
+    text-align: center;
+    font-size: 26px;
+}
+.card:hover{
+    scale: 1.2;
+}
+.container_pages3{
+    background-color: #060D17;
+    color: #fff;
+    padding: 360px;
+    height: 100rem;
+}
+.form-floating{
+    margin-top: 60px;
+}
+.form-check{
+    margin-top: 60px;
+    font-size: 20px;
+}
+.btnSubmit{
+    margin-top: 60px;
+    
+}
+.btn{
+    font-size: 20px;
 }

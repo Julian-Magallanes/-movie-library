@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
@@ -27,18 +31,64 @@
             <button>Iniciar Sesion</button>
           </div>
           <div class="navBar_menu">
-            <img src="../images/🦆 icon _menu_.png" alt="iconMenu">
-            <ul class="navBar_menuList">
-              <li><a href="../pages/sobre-mi-proyecto.html">Sobre mi proyecto</a></li>
-              <li><a href="../pages/historia-del-cine.html">Historia del cine</a></li>
-              <li><a href="../pages/webs-recomendadas.html">Webs recomendadas</a></li>
+            <button class="btn btn-dark menuList" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../images/🦆 icon _menu_.png" alt="iconMenu">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a href="../index.html" class="dropdown-item fs-5">Home</a></li>
+              <li><a href="../pages/sobre-mi-proyecto.html" class="dropdown-item fs-5">Sobre mi proyecto</a></li>
+              <li><a href="../pages/historia-del-cine.html" class="dropdown-item fs-5">Historia del cine</a></li>
+              <li><a href="../pages/webs-recomendadas.html" class="dropdown-item fs-5">Webs recomendadas</a></li>
+              <li><a href="../pages/contactanos.html" class="dropdown-item fs-5">Contactanos</a></li>            
             </ul>
           </div>
       </div>
       </nav>
     </header>
     <main>
-
+      <div class="container_pages">
+        <div class="container_pagesSections">
+          <h4>Descripción:</h4>
+          <p>Cinema Review es una aplicación innovadora y fácil de usar. Diseñada para un amantes del cine, esta plataforma se destaca por ofrecer una experiencia integral en la búsqueda de información sobre películas.</p>
+          <h4>Características Principales:</h4>
+        </div>
+        <div >
+          <ul>
+            <li class="container_pagesSections">
+              <h5>Interfaz Intuitiva:</h5>
+              <p>Una interfaz de usuario limpia y fácil de navegar que permite a los usuarios encontrar la información que desean de manera rápida y eficiente.</p>
+              <img src="../images/representaciones-experiencia-usuario-diseno-interfaz.jpg" alt="representaciones-experiencia-usuario-diseno-interfaz">
+            </li>
+            <li class="container_pagesSections">
+              <h5>Base de Datos Exhaustiva:</h5>
+              <p>Cinema Review cuenta con una base de datos extensa que abarca una amplia variedad de películas, desde clásicos hasta los últimos lanzamientos. Los usuarios pueden explorar detalles como el elenco, el director, la sinopsis y más.</p>
+            </li >
+            <li class="container_pagesSections">
+              <h5>Calificaciones y Reseñas:</h5>
+              <p>Integra calificaciones de diversas fuentes confiables y reseñas de usuarios, proporcionando a los cinéfilos una visión completa antes de decidir qué película ver.</p>
+              <img src="../images/collage-concepto-experiencia-cliente.jpg" alt="collage-concepto-experiencia-cliente">
+            </li>
+            <li class="container_pagesSections">
+              <h5>Funcionalidades Personalizadas:</h5>
+              <p>Los usuarios pueden crear listas personalizadas de películas pendientes, vistas o favoritas. Además, la aplicación ofrece recomendaciones basadas en las preferencias individuales del usuario.</p>
+            </li>
+            <li class="container_pagesSections">
+              <h5>Notificaciones y Actualizaciones:</h5>
+              <p>Mantente al tanto de los próximos lanzamientos, eventos especiales o noticias relevantes relacionadas con el mundo del cine a través de notificaciones personalizables.</p>
+              <img src="../images/hombre-feliz-camisa-blanca-chaqueta-mira-estatuilla-oscar.jpg" alt="hombre-feliz-camisa-blanca-chaqueta-mira-estatuilla-oscar">
+            </li>
+            <li class="container_pagesSections">
+              <h5>Integración con Plataformas de Transmisión:</h5>
+              <p>Facilita a los usuarios la búsqueda de dónde pueden ver una película, ya sea en cines o en plataformas de transmisión en línea, con enlaces directos y opciones de reproducción.</p>
+            </li>
+            <li class="container_pagesSections">
+              <h5>Accesibilidad y Compatibilidad:</h5>
+              <p>Cinema Review está diseñado para ser accesible desde cualquier dispositivo, ya sea una computadora de escritorio, una tableta o un teléfono móvil. Además, es compatible con los principales navegadores web.</p>
+              <img src="../images/responsive.jpg" alt="responsive">
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
     <script src="../scripts/tempData.js"></script>
     <script src="../scripts/index.js"></script>
