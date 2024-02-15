@@ -1,8 +1,9 @@
 const express = require ("express");
-const routerRaiz = require ("./routes/routesRoot");
+const routerMovies = require ("./routes/routesMovies");
 
 const app = express();
 
-app.use("/movies", routerRaiz)
+app.use( routerMovies)
+
 
 module.exports = app;

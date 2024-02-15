@@ -1,7 +1,7 @@
-    const app = require ("./src/server")
+const app = require ("./src/server.js")
 
-const puerto = 3000
+const puerto = 3000;
 
-app.listen (puerto, () =>{
-    console.log(`server listenin on http://localhost:${puerto}`);
+app.listen(puerto, () =>{
+    console.log(`server listening on http://localhost:${puerto}`);
 })
