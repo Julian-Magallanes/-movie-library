@@ -13,7 +13,7 @@ const axios = require ('axios')
 */
 async function getMovies(){
     try{
-    const{data} =  await axios.get(`https://students-api.2.us-1.fl0.io/movies`)
+    const{data} =  await axios.get("http://localhost:3000/movies")
     data.map(movie =>renderCards(movie))
     } catch (error) {
     console.log(error.message)

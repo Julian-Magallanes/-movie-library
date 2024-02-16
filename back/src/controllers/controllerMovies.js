@@ -1,7 +1,20 @@
-const controladorMovies = (req, res) =>{
-    res
-    .status(200)
-    .send ("próximamente estarán disponibles los datos de películas.");
-};
+const {getMovies} = require ("../services/movieService")
 
-module.exports = controladorMovies;
+
+module.exports = {
+    getMovies: async (req, res) =>{
+        try {
+            const movies = await getMovies();
+            res
+              .status(200)
+              .json(movies);
+          } catch (error) {
+            res
+              .status(500)
+              .json({
+                message: "Error al obtener los datos",
+                error: error.message
+              })
+          }
+    }
+}
