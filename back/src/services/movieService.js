@@ -1,4 +1,4 @@
-const BD_movies = {
+/*const BD_movies = {
     movies: [
         {
             title: "Guardians of the Galaxy Vol. 2",
@@ -32,9 +32,11 @@ const BD_movies = {
           },
     ]
 }
-
+*/
+const Movies = require ("../models/Movies")
 module.exports = {
     getMovies: async () => {
-        return await BD_movies.movies
+        const movies = await Movies.find();
+        return movies
     }
 }
