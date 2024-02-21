@@ -136,11 +136,12 @@ font-size: 40px;
 }
 .filter_ContainerButtons button{
     background-color: #1C252F;
-    width: 160px;
+    width: 200px;
     border: none;
     height:100% ;
     font-size: 24px;
     color: #fff;
+
 }
 
 .menuListFilter{
@@ -158,12 +159,13 @@ font-size: 40px;
     background-color: #060D17;
     padding:40px ;
     width: 100%;
-    height: 100%;
+
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 }
+/*
 .card_movies{
     background-color: #1C252F;
     margin: 20px 40px 20px 40px;
@@ -174,6 +176,7 @@ font-size: 40px;
     border-radius: 10px;
     text-align: center;
     transition: 0.5s;
+    height: 570px;
 }
 .card_movies:hover{
     scale: 1.1;
@@ -183,6 +186,7 @@ font-size: 40px;
 .card_movies img {
     height: 500px;
     border-radius: 10px 10px 0px 0px;
+    width: 320px;
 }
 
 .card_movies a {
@@ -211,19 +215,96 @@ font-size: 40px;
     opacity: 0;
     font-size: 16px;
     color: #fff;
-    position: absolute;
-    bottom: 70px;
+    position: relative;
+    bottom: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: 0.5s;
     padding: 20px;
+    background-color: #1C252F;
 
 }
-.card_list:hover{
+*/
+/**/
+
+
+.card_movies {
+    background-color: #1C252F;
+    width: 320px;
+    height: 570px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: relative;
+    border-radius: 10px;
+    margin: 20px 40px 20px 40px;
+  }
+  
+  .card_img {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    color: black;
+    font-weight: bold;
+  }
+  .card_img img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .card_listContent  p {
+    font-size: 22px;
+    color: #fff;
+    padding: 8px;
+    margin-top: 20px;
+  }
+  .card_listContent  h6 {
+    font-size: 16px;
+    color:#FFF;
+    border-radius: 50%;
+    padding: 8px;
+    margin-top: 40px;
+  }
+  
+  .card_list  a {
+    font-weight: bold;
+    font-size: 22px;
+    color:#FFF;
+    border-radius: 50%;
+    padding: 8px;
+    margin-top: 20px;
+    width: 120px;
+  }
+  
+  .card_list {
+    color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: #1C252F;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    transition: height .5s ease-in-out;
+    padding: 0.6em;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+  .card_movies:hover > .card_list {
+    height: 32em;
+  }
+  .card_listIcon{
+    width: 32px;
+    margin-right: 20px;
+  }
+/*
+.card_list:hover {
     opacity: 1;
     background-color: #1C252F;
 }
+*/
 .container_pages{
     background-color: #060D17;
     color: #fff;
@@ -236,6 +317,7 @@ font-size: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .container_pages h4{
     font-size: 40px;
@@ -265,9 +347,13 @@ font-size: 40px;
     width: 50rem;
     height: 55rem;
 }
-.card-img-top{
+.card-imgContainer{
     height: 50rem;
+    display: flex;
+    align-items: center;
 }
+
+
 .card-text{
     text-align: center;
     font-size: 26px;
@@ -278,20 +364,63 @@ font-size: 40px;
 .container_pages3{
     background-color: #060D17;
     color: #fff;
-    padding: 360px;
+    padding: 200px 360px;
     height: 100rem;
 }
-.form-floating{
-    margin-top: 60px;
+.form-label{
+    font-size: 24px;
 }
-.form-check{
-    margin-top: 60px;
+
+.container_pages3 h4 {
+    font-size: 40px;
+    text-align: center;
+}
+.mb-3{
+    margin: 20px 0;
+}
+.btnMovies{
     font-size: 20px;
+    width: 400px;
+    margin: 60px 60px 60px 0;
+    font-size: 24px;
+}
+.btnMovies2{
+    font-size: 20px;
+    width: 400px;
+    margin: 60px 0px 60px 0;
+    font-size: 24px;
 }
 .btnSubmit{
-    margin-top: 60px;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.btn{
+.form-control{
+    height: 52px;
     font-size: 20px;
+}
+.container_construccion{
+    background-image: url("../images/en-construccion.jpg");
+    background-size:cover;
+    display: grid;
+}
+.container_construccionDescription{
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    background-color: #1C252F;
+    border-radius: 20px;
+    color: #fff;
+    padding: 20px;
+}
+.container_construccionDescription:hover{
+    scale: 1.2;
+}
+.container_construccionDescription h1{
+
+    font-size: 42px;
+}
+.container_construccionDescription p{
+    color: #fff;
+    font-size: 24px;
 }

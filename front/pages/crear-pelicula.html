@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navBar">
+        <a href="../index.html" class="navBar_logo">
+          <img src="../images/logo-05.png" alt="logoCinemaReview" id="logo">
+          <img src="../images/Cinema Review.png" alt="logoTitle" id="logoTitle">
+        </a>
+        <div class="navBar_container">
+          <div class="navBar_Search">
+            <img src="../images/magnifying.png" alt="iconLupa">
+            <input type="text" placeholder="Busqueda de Peliculas o Series">
+          </div>
+          <div class="navBar_login">
+            <button>Iniciar Sesion</button>
+          </div>
+          <div class="navBar_menu">
+            <button class="btn btn-dark menuList" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../images/menu.png" alt="iconMenu">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a href="../index.html" class="dropdown-item fs-5">Home</a></li>
+              <li><a href="./sobre-mi-proyecto.html" class="dropdown-item fs-5">Sobre mi proyecto</a></li>
+              <li><a href=".//historia-del-cine.html" class="dropdown-item fs-5">Historia del cine</a></li>
+              <li><a href="./webs-recomendadas.html" class="dropdown-item fs-5">Webs recomendadas</a></li>
+              <li><a href="./contactanos.html" class="dropdown-item fs-5">Añadir peliculas</a></li>            
+            </ul>
+          </div>
+      </div>
+      </nav>
+    </header>
+    <main>
+        <form class="container_pages3" >
+            <h4>Crear una nueva pelicula</h4>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+              <input type="text" class="form-control" id="title" placeholder="Introduzca en nombre de la pelicula.">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Año</label>
+              <input type="number" class="form-control" id="year" placeholder="Introduzca en año en que se realizo la pelicula.">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Director</label>
+              <input type="text" class="form-control" id="director" placeholder="Introduzca en nombre del director de la pelicula.">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Duracion</label>
+              <input type="text" class="form-control" id="duration" placeholder="Introduzca la Duracion de la pelicula.">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Generos</label>
+              <input type="text" class="form-control" id="genre" placeholder="Introduzca los generos de la pelicula">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Rating</label>
+              <input type="number" step="any" class="form-control" id="rate" placeholder="Introduzca la valoracion de la pelicula del 1 al 10">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">URL Imagen</label>
+              <input type="text" class="form-control" id="poster" placeholder="Introduzca la url de la imagen de portada de la pelicula">
+            </div>
+            <div class="col-12 btnSubmit">
+              <div>
+                <button class="btn btn-dark btnMovies" type="submit" value="crear" id="submitForm">Enviar formulario</button>
+                <button class="btn btn-dark btnMovies" type="submit">Limpiar inputs</button>
+              </div>
+              <div>
+                <a href="../index.html" class="btn btn-dark btnMovies2">Volver a pagina de inicio</a>
+              </div>
+            </div>
+          </form>
+        </div>
+    </main>
+    <script src="../public/bundle.js"></script>
+  </body>
+</html>

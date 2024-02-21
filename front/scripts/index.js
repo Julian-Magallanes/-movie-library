@@ -1,16 +1,7 @@
 const renderCards = require ("./renderCards")
+const createMovie = require ("./createMovie")
 const axios = require ('axios')
 
-
-/*$.get(`https://students-api.2.us-1.fl0.io/movies`,(DataMovies, status) =>{
-    if (status==="success"){
-        DataMovies.map(movie =>renderCards(movie))
-        }
-     else {
-        alert("Error")
-    }
-})
-*/
 async function getMovies(){
     try{
     const{data} =  await axios.get("http://localhost:3000/movies")
@@ -19,4 +10,9 @@ async function getMovies(){
     console.log(error.message)
     }
 }
-getMovies();
+
+document.addEventListener ("DOMContentLoaded", () => {
+    getMovies();
+    const submit = document.getElementById("submitForm");
+    submit?.addEventListener("click", createMovie);
+})

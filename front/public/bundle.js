@@ -9,13 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./scripts/createMovie.js":
+/*!********************************!*\
+  !*** ./scripts/createMovie.js ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n function validateFormContent ({\r\n    title, year, director, duration, genre, rate, poster\r\n }){\r\n    if(!title || !year || !director || !duration || !genre[0] || !rate || !poster)\r\n        return \"Completar todos los campos\"\r\n    if(year > 1895 || year < new Date().getFullYear())\r\n    if(director.length < 4 )\r\n        return \"El nombre del director es muy corto, debe tener mas de 4 caracteres\"\r\n    if(director.length > 30)\r\n        return \"El nombre del director es muy largo, debe tener menos de 30 caracteres\"\r\n    if(isNaN(rate) || rate < 1 || rate > 10)\r\n        return \"La calificacion debera ser entre 1 y 10\"\r\n    if(!poster.includes(\"https://\"))\r\n        return \"La url no contiene el formato correspondiente\"\r\n    return null\r\n}\r\n \r\n \r\n \r\n function createMovie(event){\r\n    event.preventDefault();\r\n    \r\n    const title = document.getElementById(\"title\").value;\r\n    const year = document.getElementById(\"year\").value;\r\n    const director = document.getElementById(\"director\").value;\r\n    const duration = document.getElementById(\"duration\").value;\r\n    const genre = document.getElementById(\"genre\").value.split(\" \");\r\n    const rate = document.getElementById(\"rate\").value;\r\n    const poster = document.getElementById(\"poster\").value;\r\n\r\n    const newMovie = { title, year, director, duration, genre, rate, poster}\r\n \r\n    const error = validateFormContent ({ title, year, director, duration, genre, rate, poster})\r\n    if(error) return alert(error)\r\n\r\n    //return alert (\"La pelicula fue creada exitosamente\");\r\n    axios\r\n        .post(\"http://localhost:3000/movies\", newMovie)\r\n        .then (() => alert (\"La pelicula fue creada exitosamente\"))\r\n        .catch ((error) => alert (\"No se pudo compleetar el porceso\"));\r\n\r\n}\r\n\r\n\r\nmodule.exports = createMovie\r\n\n\n//# sourceURL=webpack://front/./scripts/createMovie.js?");
+
+/***/ }),
+
 /***/ "./scripts/index.js":
 /*!**************************!*\
   !*** ./scripts/index.js ***!
   \**************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const renderCards = __webpack_require__ (/*! ./renderCards */ \"./scripts/renderCards.js\")\r\nconst axios = __webpack_require__ (/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\r\n\r\n\r\n/*$.get(`https://students-api.2.us-1.fl0.io/movies`,(DataMovies, status) =>{\r\n    if (status===\"success\"){\r\n        DataMovies.map(movie =>renderCards(movie))\r\n        }\r\n     else {\r\n        alert(\"Error\")\r\n    }\r\n})\r\n*/\r\nasync function getMovies(){\r\n    try{\r\n    const{data} =  await axios.get(`http://localhost:3000/movies`)\r\n    data.map(movie =>renderCards(movie))\r\n    } catch (error) {\r\n    console.log(error.message)\r\n    }\r\n}\r\ngetMovies();\n\n//# sourceURL=webpack://front/./scripts/index.js?");
+eval("const renderCards = __webpack_require__ (/*! ./renderCards */ \"./scripts/renderCards.js\")\r\nconst createMovie = __webpack_require__ (/*! ./createMovie */ \"./scripts/createMovie.js\")\r\nconst axios = __webpack_require__ (/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\r\n\r\nasync function getMovies(){\r\n    try{\r\n    const{data} =  await axios.get(\"http://localhost:3000/movies\")\r\n    data.map(movie =>renderCards(movie))\r\n    } catch (error) {\r\n    console.log(error.message)\r\n    }\r\n}\r\n\r\ndocument.addEventListener (\"DOMContentLoaded\", () => {\r\n    getMovies();\r\n    const submit = document.getElementById(\"submitForm\");\r\n    submit?.addEventListener(\"click\", createMovie);\r\n})\r\n\n\n//# sourceURL=webpack://front/./scripts/index.js?");
 
 /***/ }),
 
@@ -25,7 +35,7 @@ eval("const renderCards = __webpack_require__ (/*! ./renderCards */ \"./scripts/
   \********************************/
 /***/ ((module) => {
 
-eval("const cardContainer = document.getElementById(\"card_Container\")\r\n\r\nfunction renderCards(movie) {\r\n    const cardDiv = document.createElement('div')\r\n    cardDiv.classList.add('card_movies')\r\n// optimizando codigo con innerHtml para evitar crear tantos elementos y apendear tanto\r\n    cardDiv.innerHTML = `\r\n    <img src = \"${movie.poster} alt=\"${movie.title}\"/>\r\n    <a href =\"../\">${movie.title}</a>\r\n    <div class=\"card_list\">\r\n        <h6>Año: ${movie.year}</h6>\r\n        <h6>Director: ${movie.director}</h6>\r\n        <h6>Duracion: ${movie.duration}</h6>\r\n        <h6>Generos: ${movie.genre.join(\" - \")}</h6>\r\n        <p>${movie.rate}</p>\r\n    </div>\r\n    `\r\n    cardContainer.appendChild(cardDiv)\r\n}\r\nmodule.exports = renderCards;\n\n//# sourceURL=webpack://front/./scripts/renderCards.js?");
+eval("const cardContainer = document.getElementById(\"card_Container\")\r\n\r\nfunction renderCards(movie) {\r\n    const cardDiv = document.createElement('div')\r\n    cardDiv.classList.add('card_movies')\r\n// optimizando codigo con innerHtml para evitar crear tantos elementos y apendear tanto\r\n    cardDiv.innerHTML = `\r\n        <div class=\"card_img\">\r\n            <img src = \"${movie.poster} alt=\"${movie.title}\"/>\r\n        </div>\r\n        <div class=\"card_list\">\r\n            <a href =\"./pages/en-construccion.html\">${movie.title}</a>\r\n            <div class=\"card_listContent\">\r\n                <h6>Año: ${movie.year}</h6>\r\n                <h6>Director: ${movie.director}</h6>\r\n                <h6>Duracion: ${movie.duration}</h6>\r\n                <h6>Generos: ${movie.genre.join(\" - \")}</h6>\r\n                <p><img src=\"./images/estrella.png\" alt=\"flecha\" class=\"card_listIcon\">${movie.rate}</p>\r\n            </div>\r\n        </div>\r\n    `\r\n    cardContainer?.appendChild(cardDiv)\r\n}\r\nmodule.exports = renderCards;\n\n//# sourceURL=webpack://front/./scripts/renderCards.js?");
 
 /***/ }),
 
