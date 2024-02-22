@@ -165,70 +165,6 @@ font-size: 40px;
     flex-direction: row;
     flex-wrap: wrap;
 }
-/*
-.card_movies{
-    background-color: #1C252F;
-    margin: 20px 40px 20px 40px;
-    width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.5s;
-    height: 570px;
-}
-.card_movies:hover{
-    scale: 1.1;
-    opacity: 80%;
-
-}
-.card_movies img {
-    height: 500px;
-    border-radius: 10px 10px 0px 0px;
-    width: 320px;
-}
-
-.card_movies a {
-    height: 70px;
-    font-size: 22px;
-    color: #fff;
-    width: 90%;
-    text-align: center;
-    text-decoration: none;
-}
-.card_movies p{
-    font-size: 22px;
-    color: #1C252F;
-    background: #FFF;
-    border-radius: 50%;
-    padding: 8px;
-    margin-top: 20px;
-}
-.card_movies h6{
-    font-size: 18px;
-    color: #fff;
-    margin: 4px 0 4px 0;
-
-}
-.card_list{
-    opacity: 0;
-    font-size: 16px;
-    color: #fff;
-    position: relative;
-    bottom: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.5s;
-    padding: 20px;
-    background-color: #1C252F;
-
-}
-*/
-/**/
-
-
 .card_movies {
     background-color: #1C252F;
     width: 320px;
@@ -300,12 +236,6 @@ font-size: 40px;
     margin-right: 20px;
     background: url('../images/estrella.png') no-repeat;
   }
-/*
-.card_list:hover {
-    opacity: 1;
-    background-color: #1C252F;
-}
-*/
 .container_pages{
     background-color: #060D17;
     color: #fff;

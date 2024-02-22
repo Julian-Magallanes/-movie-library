@@ -4,7 +4,8 @@ const axios = require("axios");
  }){
     if(!title || !year || !director || !duration || !genre[0] || !rate || !poster)
         return "Completar todos los campos"
-    if(year > 1895 || year < new Date().getFullYear())
+    if(year < 1895 || year > new Date().getFullYear())
+        return "El año es erroneo: antes de la primera pelicula o luego del dia actual";
     if(director.length < 4 )
         return "El nombre del director es muy corto, debe tener mas de 4 caracteres"
     if(director.length > 30)

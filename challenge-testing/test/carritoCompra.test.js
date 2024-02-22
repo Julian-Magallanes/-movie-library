@@ -43,5 +43,7 @@ describe("Clase CarritoCompra", () => {
     it("aplicarDescuento da error al pasar descuento mayor a 100", () => {
       expect(carrito.aplicarDescuento(150)).toBe("El descuento debe ser entre 0 y 100%");
     });
-  
+    it("aplicarDescuento da error al pasar descuento menor a 0", () => {
+      expect(carrito.aplicarDescuento(-10)).toBe("El descuento debe ser entre 0 y 100%");
+    });
   });
