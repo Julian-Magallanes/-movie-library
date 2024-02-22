@@ -298,6 +298,7 @@ font-size: 40px;
   .card_listIcon{
     width: 32px;
     margin-right: 20px;
+    background: url('../images/estrella.png') no-repeat;
   }
 /*
 .card_list:hover {
