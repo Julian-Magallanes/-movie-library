@@ -1,6 +1,6 @@
 const app = require ("./src/server.js")
 const dbConfig = require("./src/config/dbConfig.js")
-const puerto = 3000;
+const puerto = 3001;
 
 dbConfig().then(
     res =>{

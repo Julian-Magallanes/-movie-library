@@ -37,7 +37,7 @@ const axios = require("axios");
 
     //return alert ("La pelicula fue creada exitosamente");
     axios
-        .post("http://localhost:3000/movies", newMovie)
+        .post("http://localhost:3001/movies", newMovie)
         .then (() => alert ("La pelicula fue creada exitosamente"))
         .catch ((error) => alert ("No se pudo compleetar el porceso"));
 

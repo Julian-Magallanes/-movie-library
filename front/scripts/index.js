@@ -4,7 +4,7 @@ const axios = require ('axios')
 
 async function getMovies(){
     try{
-    const{data} =  await axios.get("http://localhost:3000/movies")
+    const{data} =  await axios.get("http://localhost:3001/movies")
     data.map(movie =>renderCards(movie))
     } catch (error) {
     console.log(error.message)

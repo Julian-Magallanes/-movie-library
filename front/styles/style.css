@@ -19,6 +19,7 @@ a{
     flex-direction: row;
     align-items: center;
 }
+
 #logo {
     height: 45px;
 }
@@ -78,6 +79,48 @@ a{
     align-items: center
 
 }
+@media (max-width: 768px){
+    .navBar_Search{
+        display: none;
+    }
+    .navBar_login button{
+        display: none;
+    }
+    #logo {
+        height: 25px;
+    }
+    #logoTitle {
+        height: 18px;
+    }
+    .navBar_logo{
+        margin-right: 20px;
+    }
+    .navBar{
+        height: 60px;
+        padding:  0 20px 0 20px ;
+    }
+}
+@media (max-width: 420px){
+    .navBar_Search{
+        display: none;
+    }
+    .navBar_login button{
+        display: none;
+    }
+    #logo {
+        height: 25px;
+    }
+    #logoTitle {
+        height: 18px;
+    }
+    .navBar_logo{
+        margin-right: 20px;
+    }
+    .navBar{
+        height: 60px;
+        padding:  0 20px 0 20px ;
+    }
+}
 .neews_Container {
     height: 600px;
     background: url("../images/poor-things-estreno.png");
@@ -121,6 +164,41 @@ font-size: 40px;
     height: 120px;
    
 }
+@media (max-width: 768px){
+    .neews_ContainerTitle {
+        justify-content: center;
+    }
+    .neews_Container {
+        height: 400px;
+        background-attachment:initial;
+    }
+    .neews_ContainerTitle h2{
+        font-size: 32px;
+        margin: 4px;
+    }
+    .neews_ContainerTitle img{
+        height: 84px;
+    }
+    .neews_ContainerTitle {
+        margin: 20px;
+    }
+}
+@media (max-width: 420px){
+    .neews_Container {
+        height: 400px;
+        background-attachment:initial;
+    }
+    .neews_ContainerTitle h2{
+        font-size: 20px;
+        margin: 4px;
+    }
+    .neews_ContainerTitle img{
+        height: 60px;
+    }
+    .neews_ContainerTitle {
+        margin: 20px;
+    }
+}
 .filter_Container{
     background-color: #1C252F;
     height: 60px;
@@ -154,6 +232,45 @@ font-size: 40px;
 .menuListFilter p{
     margin: 0 ;
 
+}
+@media (max-width: 768px){
+    .filter_Container{
+        padding:  0 20px 0 20px ;
+    }
+    .filter_ContainerButtons button{
+        width: 120px;
+        border: none;
+        height:100% ;
+        font-size: 20px;
+        color: #fff;
+    
+    }
+    .menuListFilter p{
+        font-size: 20px;
+    }
+    .menuListFilter p img{
+        width: 20px;
+    }
+}
+@media (max-width: 420px){
+    .filter_Container{
+        height: 44px;
+        padding:  0 20px 0 20px ;
+    }
+    .filter_ContainerButtons button{
+        width: 64px;
+        border: none;
+        height:100% ;
+        font-size: 12px;
+        color: #fff;
+    
+    }
+    .menuListFilter p{
+        font-size: 12px;
+    }
+    .menuListFilter p img{
+        width: 14px;
+    }
 }
 #card_Container{
     background-color: #060D17;
@@ -236,6 +353,23 @@ font-size: 40px;
     margin-right: 20px;
     background: url('../images/estrella.png') no-repeat;
   }
+  @media (max-width: 420px){
+    .card_movies {
+        width: 280px;
+        height: 470px;
+        margin: 10px 20px 10px 20px;
+      }
+      .card_img img {
+        height: 370px;
+        border-radius: 10px 10px 0px 0px;
+      }
+      .card_movies:hover > .card_list {
+        height: 28em;
+      }
+      .card_listContent  h6 {
+        margin-top: 20px;
+      }
+  }
 .container_pages{
     background-color: #060D17;
     color: #fff;
@@ -291,6 +425,23 @@ font-size: 40px;
 }
 .card:hover{
     scale: 1.2;
+}
+@media (max-width: 768px){
+    .container_pages2{
+        padding: 20px;
+    }
+    .card{
+        margin: 10px;
+        width: 18rem;
+        height: 22rem;
+    }
+    .card-imgContainer{
+        height: 18rem;
+    }
+    .card-text{
+
+        font-size: 16px;
+    }
 }
 .container_pages3{
     background-color: #060D17;
@@ -354,4 +505,75 @@ font-size: 40px;
 .container_construccionDescription p{
     color: #fff;
     font-size: 24px;
+}
+@media (max-width: 768px){
+    .container_pages3{
+        padding: 20px 40px;
+        height: 70rem;
+    }
+    .form-label{
+        font-size: 20px;
+    }
+    
+    .container_pages3 h4 {
+        font-size: 32px;
+    }
+    .btnMovies{
+        font-size: 20px;
+        width: 200px;
+        margin: 20px 20px 20px 0;
+        font-size: 20px;
+        height: 80px;
+    }
+    .btnMovies2{
+        font-size: 20px;
+        width: 200px;
+        margin: 20px 0px 20px 0;
+        font-size: 20px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+@media (max-width: 420px){
+    .container_pages3{
+        height: 80rem;
+    }
+    .form-label{
+        font-size: 14px;
+    }
+    
+    .container_pages3 h4 {
+        font-size: 22px;
+    }
+    .btnMovies{
+        font-size: 18px;
+        width: 100%;
+        height: 80px;
+    }
+    .btnMovies2{
+        font-size: 18px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btnSubmit{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .container_construccionDescription h1{
+        padding: 8px;
+        font-size: 22px;
+    }
+    .container_construccionDescription p{
+        color: #fff;
+        font-size: 16px;
+    }
+    .container_construccionDescription{
+        padding: 8px;
+    }
 }
